@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<hibernate-configuration>
+    <session-factory>
+        <property name="hibernate.dialect">org.hibernate.dialect.PostgreSQL82Dialect</property>
+        <property name="hibernate.connection.driver_class">org.postgresql.Driver</property>
+        <property name="hibernate.connection.username">task_spring</property>
+        <property name="hibernate.connection.password">123456</property>
+        <property name="hibernate.connection.url">jdbc:postgresql://localhost:5432/spring_Book</property>
+        <!-- Drop and re-create the database schema on startup -->
+        <property name="hbm2ddl.auto">create</property>
+        <property name="show_sql">true
+        </property>
+
+        <!-- MAPPINGS -->
+            <mapping class="org.example.Employee"/>
+        <mapping class="org.example.TeacherEntity"/>
+        <mapping class="org.example.PersonEntity"/>
+    </session-factory>
+
+</hibernate-configuration>
